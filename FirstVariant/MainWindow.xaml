@@ -1,0 +1,44 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstVariant"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="FirstVariant.MainWindow"
+        mc:Ignorable="d"
+        Title="ХИМИЯ" Height="450" Width="800">
+    <Grid x:Name="MainGrid">
+        <Label x:Name="TxtLogo" Content="ХИМИЯ" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Sitka Small"/>
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="240" Margin="468,120,0,0" VerticalAlignment="Top" Width="300" Source="/Suoqz.png"/>
+        <Button x:Name="OneThemeButton" Content="Тела и вещества" HorizontalAlignment="Left" Margin="59,140,0,0" VerticalAlignment="Top" Height="64" Width="257" Background="#FF003B79" BorderBrush="{x:Null}" Foreground="White" FontSize="24" Click="OneThemeButton_Click"/>
+        <Button x:Name="TwoThemeButton" Content="Физ и хим процессы" HorizontalAlignment="Left" Margin="59,217,0,0" VerticalAlignment="Top" Height="64" Width="257" Background="#FF003B79" BorderBrush="{x:Null}" Foreground="White" FontSize="24" Click="TwoThemeButton_Click"/>
+        <Button x:Name="ThreeThemeButton" Content="Химические элементы" HorizontalAlignment="Left" Margin="59,296,0,0" VerticalAlignment="Top" Height="64" Width="257" Background="#FF003B79" BorderBrush="{x:Null}" Foreground="White" FontSize="22" Click="ThreeThemeButton_Click"/>
+        <Grid x:Name="ThemeOneGrid" Background="White" d:IsHidden="True">
+            <ListBox x:Name="ThemeListView" Margin="0,77,0,0" FontSize="18" />
+        </Grid>
+        <Grid x:Name="ThemeTwoGrid" Background="White" d:IsHidden="True">
+            <ListBox x:Name="ThemeListBox" Margin="0,66,0,0" FontSize="18"/>
+        </Grid>
+        <Grid x:Name="ThemeThreeGrid" Background="White">
+            <ListBox x:Name="ThemeList" Margin="0,140,0,0" FontSize="18"/>
+            <TextBox x:Name="SereachElement" HorizontalAlignment="Center" Margin="0,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="492" Height="42" FontSize="20" TextChanged="SereachElement_TextChanged"/>
+        </Grid>
+        <Button x:Name="AddTheme" Content="+" HorizontalAlignment="Left" Margin="26,12,0,0" VerticalAlignment="Top" Height="52" Width="62" FontSize="24" BorderBrush="{x:Null}" Foreground="White" Background="#FF003B79" Click="AddTheme_Click"/>
+        <Grid x:Name="AddThemeGrid" Background="White" Margin="0,0,10,87" d:IsHidden="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="331*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="infoLabel" Content="ДОБАВИТЬ ТЕМУ" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="63" Width="296" FontSize="36" Grid.RowSpan="2"/>
+            <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="188,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="569" Height="59" FontSize="24" Grid.Row="1"/>
+            <TextBox x:Name="ThemeTextBox" HorizontalAlignment="Left" Margin="188,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="569" Height="177" FontSize="16" Grid.Row="1"/>
+            <Label x:Name="nameLabel" Content="НАЗАНИЕ" HorizontalAlignment="Left" Margin="52,68,0,0" VerticalAlignment="Top" Height="46" Width="131" FontSize="24" Grid.Row="1"/>
+            <Label x:Name="txtLabel" Content="СОДЕРЖАНИЕ" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Height="46" Width="178" FontSize="24" Grid.Row="1"/>
+            <Button x:Name="SaveDataButton" Content="СОХРАНИТЬ" HorizontalAlignment="Left" Margin="30,259,0,0" VerticalAlignment="Top" Height="46" Width="138" FontSize="20" BorderBrush="{x:Null}" Foreground="White" Background="#FF003B79" Click="SaveDataButton_Click" Grid.Row="1"/>
+        </Grid>
+        <ComboBox x:Name="navigationBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Height="49" SelectionChanged="navigationBox_SelectionChanged" FontSize="18" BorderBrush="{x:Null}" Margin="450,16,0,0">
+        </ComboBox>
+        <Button x:Name="ExitButton" HorizontalAlignment="Left" Margin="157,14,0,0" VerticalAlignment="Top" Height="48" Width="62" FontSize="24" Background="#FF003B79" BorderBrush="{x:Null}" Foreground="White" Click="ExitButton_Click" Content="x"/>
+
+    </Grid>
+</Window>
